@@ -15,7 +15,7 @@ int main () {
 		/* I know I can do the following directly with integers instead,
 		but in the interests of learning... */
 		printf("Rock(r), Paper(p), Scissors(s), Lizard(l), Spock(v)? [q to quit] ");
-		scanf("%s", &userin); //address of userin
+		scanf(" %c", &userin); //address of userin - changed to character, space before %c to consume whitespace
 		//could I use fgets here instead? Safer?
 
 		if (isdigit(userin)) {
