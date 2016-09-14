@@ -5,11 +5,43 @@ Over Summer 2016 I set myself the task of learning some different programming la
 
 I'll probably add versions in other languages such as Ruby, Java, etc. as I experiment with them.
 
-###Logic
+###Rock, Paper, Scissors Logic
 
-It's easy when it come to rps as there is only one winning and one losing option based on any one move
+There is only onw winning move and one losing move for any given play.  So if we assign the player and computer differentlt, we can use some maths to work out the winner, thus...
 
-However, when it comes to Rock, Paper, Scissors, Lizard, Spock things get a bit more complex.  There are now two winning and to losing moves based on a given move.
+    pr = 1      cr = 3
+    pp = 2      pp = 2
+    ps = 3      cs = 1
+    
+A draw would sum to 4, always:
+
+    pr cr:	1,3		pr + cr = 4
+    pp cp:	2,2		pp + cp = 4
+    ps cs:	3,1		ps + cs = 4
+    
+A Computer win will sum to in either 3 or 6:
+
+    pr cp	1,2		rock < paper      wraps
+    pp cs	2,1		paper < scissors  cuts
+    ps cr	3,3		scissors < rock   blunts
+
+A Player win will sum to either 2 or 5:
+
+    pr cs	1,1		rock > scissors		blunts
+    pp cr	2,3		paper > rock		wraps
+    ps cp	3,2		scissors > paper	cuts
+
+This is easy to implement using `switch` as we only have five numbers to `case`
+
+However we could also do this...
+
+    10 % (playermove + computer move)
+    
+A draw would equal 2, a player win 4 or 1 and a computer win 0, gives us one less `case`.  N.B. I'm no mathematician, so they're probably is a vastly easier way of doing this.
+
+###Rock, Paper, Scissors, Lizard, Spock Logic
+
+It's easy when it come to rps as there is only one winning and one losing option based on any one move.  However, when it comes to Rock, Paper, Scissors, Lizard, Spock things get a bit more complex.  There are now two winning and to losing moves based on a given move.  So a simple switch statement is probably not the most efficient here.
 
 So assuming the player is p and the computer is c, we can describe the moves, thus with rock(r), paper(p), scissors(s), lizard(l) and spock(v)...
 
@@ -19,7 +51,7 @@ So assuming the player is p and the computer is c, we can describe the moves, th
     pl = 4		cl = 4
     pv = 5		cv = 5
 
-A draw would result in a equivalent ==
+A draw would result in a equivalent
 
     pr cr:	1,1		rock == rock
     pp cp:	2,2		paper == paper
