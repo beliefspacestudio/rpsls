@@ -7,7 +7,7 @@ I'll probably add versions in other languages such as Ruby, Java, etc. as I expe
 
 ###Rock, Paper, Scissors Logic
 
-There is only onw winning move and one losing move for any given play.  So if we assign the player and computer differentlt, we can use some maths to work out the winner, thus...
+There is only one winning move and one losing move for any given play.  So if we assign the player and computer moves different integers, we can use some maths to work out the winner, thus...
 
     pr = 1      cr = 3
     pp = 2      pp = 2
@@ -33,7 +33,7 @@ A Player win will sum to either 2 or 5:
 
 This is easy to implement using `switch` as we only have five numbers to `case`
 
-However we could also do this...
+However we could also do this (11 is a prime number)...
 
     Outcome = 11 % (11 % (playermove + computer move))
     
