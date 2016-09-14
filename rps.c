@@ -56,8 +56,8 @@ int main () {
 				cscore += 1;
 				printf("Computer wins\n");
 			} else if (outcome == 0) {
-					pscore += 1;
-					printf("Player wins\n");
+				pscore += 1;
+				printf("Player wins\n");
 			} else {
 				printf("My mind is going\n");
 			}
@@ -68,24 +68,3 @@ int main () {
 	} //end while
 	
 }
-
-/*
-pr = 1		cr = 3
-pp = 2		cp = 2
-ps = 3		cs = 1
-
-// A draw:
-pr cr:	1,3		11 % (1 + 3) = 3	11 % 3 = 2		rock == rock
-pp cp:	2,2		11 % (2 + 2) = 3	11 % 3 = 2		paper == paper
-ps cs:	3,1		11 % (3 + 1) = 3	11 % 3 = 2		scissors == scissors
-
-//computer wins
-pr cp	1,2		11 % (1 + 2) = 2	11 % 2 = 1		rock < paper		wraps
-pp cs	2,1		11 % (2 + 1) = 2	11 % 2 = 1		paper < scissors	cuts
-ps cr	3,3		11 % (3 + 3) = 5	11 % 5 = 1		scissors < rock		blunts
-
-//player wins
-pr cs	1,1		11 % (1 + 1) = 1	11 % 1 = 0		rock > scissors		blunts
-pp cr	2,3		11 % (2 + 3) = 1	11 % 1 = 0		paper > rock		wraps
-ps cp	3,2		11 % (3 + 2) = 1	11 % 1 = 0		scissors > paper	cuts
-*/
