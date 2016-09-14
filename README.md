@@ -28,7 +28,7 @@ A draw would result in a equivalent ==
     pv cv:	5,5		spock == spock
     draws = {11,22,33,44,55}
 
-A Computer can be described as...
+A Computer win can be described as...
 
     pr cv	1,5		rock < spock      vaporises
     pr cp	1,2		rock < paper      wraps
