@@ -35,13 +35,13 @@ This is easy to implement using `switch` as we only have five numbers to `case`
 
 However we could also do this...
 
-    10 % (playermove + computer move)
+    Outcome = 11 % (11 % (playermove + computer move))
     
-A draw would equal 2, a player win 4 or 1 and a computer win 0, gives us one less `case`.  N.B. I'm no mathematician, so they're probably is a vastly easier way of doing this.
+That way, a draw would equal 2, a Computer win would equal 1 and a Player win would equal 0. Reducing our `case` to three possibilities.  We could then just use an `if` `else` statement.  N.B. I'm no mathematician so there probably is an easier way of doing this.
 
 ###Rock, Paper, Scissors, Lizard, Spock Logic
 
-It's easy when it come to rps as there is only one winning and one losing option based on any one move.  However, when it comes to Rock, Paper, Scissors, Lizard, Spock things get a bit more complex.  There are now two winning and to losing moves based on a given move.  So a simple switch statement is probably not the most efficient here.
+It's easy when it come to rps as there is only one winning and one losing option based on any one move.  However, when it comes to Rock, Paper, Scissors, Lizard, Spock things get a bit more complex.  There are now two winning and to losing moves based on a given move. So the maths used for Rock, Paper, Scissors no longer works.
 
 So assuming the player is p and the computer is c, we can describe the moves, thus with rock(r), paper(p), scissors(s), lizard(l) and spock(v)...
 
