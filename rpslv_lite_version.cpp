@@ -44,8 +44,7 @@ int main() {
         std::system("clear");
         std::cout <<  "Rock, Paper, Scissors, Lizard, Spock\n";
 
-        std::cout << "Player: " << playerScore;
-        std::cout << " vs. Computer: " << computerScore << "\n\n";
+        std::cout << "Player: " << playerScore << " vs. Computer: " << computerScore << "\n\n";
 
         int player = playerMove();
         if (player == -1) { return 0; } //exit on invalid input
